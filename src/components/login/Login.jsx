@@ -77,7 +77,9 @@ const Login = () => {
       console.log(err);
       toast.error(err.message);
     } finally {
+      e.target.reset(); // Clear the form data
       setLoading(false);
+      setAvatar({ file: null });
     }
   };
 
